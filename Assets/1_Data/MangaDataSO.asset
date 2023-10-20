@@ -28,16 +28,16 @@ MonoBehaviour:
     manga_Sprite: {fileID: 21300000, guid: ffe80a142f324574f97732a17765d8c8, type: 3}
     manga_Page: {fileID: 21300000, guid: f832bb38b143e23439eb81239a3e7806, type: 3}
   - manga_ID: 2
-    manga_Name: "\u30DE\u30F3\u30AC\u30AC"
-    manga_ruby: 
-    manga_Fav: 3.74
+    manga_Name: "\u5C0F\u6797\u3055\u3093\u3061\u306E\u30E1\u30A4\u30C9\u30E9\u30B4\u30F3"
+    manga_ruby: "\u3053\u3070\u3084\u3057\u3055\u3093\u3061\u306E\u3081\u3044\u3069\u3089\u3054\u3093"
+    manga_Fav: 5.68
     manga_Tags:
+    - Tag: 0
+      Value: 2.84
+    - Tag: 1
+      Value: 6.08
     - Tag: 6
-      Value: 9.38
-    - Tag: 8
-      Value: 8.01
-    - Tag: 7
-      Value: 6.2
-    explanation: "\u3068\u3066\u3064\u3082\u306A\u3044\u885D\u6483\u4F5C\u3002\n\u4F55\u304B\u3089\u4F55\u307E\u3067\u65B0\u611F\u899A\u3002\n\u3068\u306B\u304B\u304F\u65B0\u3057\u304F\u65AC\u65B0\u306A\u6F2B\u753B\u304C\u8AAD\u307F\u305F\u3044\u65B9\u306F\u662F\u975E\u3002"
+      Value: 0
+    explanation: "\u4E3B\u4EBA\u516C\u306E\u5973\u6027\u3068\u30E1\u30A4\u30C9\u306E\u683C\u597D\u3092\u3057\u305F\u30C9\u30E9\u30B4\u30F3\u306E\u65E5\u5E38\u30B3\u30E1\u30C7\u30A3\u3002\n\u6642\u6298\u5165\u308B\u3001\u30B7\u30EA\u30A2\u30B9\u56DE\u3082\u9B45\u529B\u3002"
     manga_Sprite: {fileID: 0}
     manga_Page: {fileID: 0}
