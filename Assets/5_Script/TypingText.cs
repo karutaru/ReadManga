@@ -1,39 +1,60 @@
 using System.Collections;
+using DG.Tweening;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TypingText : MonoBehaviour
 {
-    public float delay = 0.05f;  // 文字間の遅延時間
-    private Text uiText;
-    private Coroutine typingCoroutine;  // タイピングコルーチンの参照
+    public float typeSpeed = 0.05f;
+    public Action OnTypeComplete;
+    public float counterDuration = 0.2f;  // カウンターアニメーションの時間
 
-    private void Awake()
+    private Tween currentTween;  // 現在のTweenアニメーションを追跡する
+
+    public void TypeText(string textToType)
     {
-        uiText = GetComponent<Text>();
+        StopAllCoroutines(); // 既存のタイピングを中止
+        if (currentTween != null)
+        {
+            currentTween.Kill();  // 既存のアニメーションをキル
+        }
+        StartCoroutine(TypeCoroutine(textToType));
     }
 
-    public void TypeText(string message)
+    private IEnumerator TypeCoroutine(string textToType)
     {
-        // 既存のタイピングコルーチンが実行中の場合、それを停止
-        if (typingCoroutine != null)
+        Text textComponent = GetComponent<Text>();
+        textComponent.text = "";
+
+        foreach (char letter in textToType.ToCharArray())
         {
-            StopCoroutine(typingCoroutine);
-            typingCoroutine = null;
+            textComponent.text += letter;
+            yield return new WaitForSeconds(typeSpeed);
         }
 
-        // 新しいタイピングコルーチンを開始
-        typingCoroutine = StartCoroutine(TypeTextCoroutine(message));
+        OnTypeComplete?.Invoke(); // タイピングが完了したらコールバックを呼び出す
     }
 
-    private IEnumerator TypeTextCoroutine(string message)
+    public void AnimateCounter(int targetValue)
     {
-        uiText.text = "";
-        foreach (char letter in message.ToCharArray())
+        int currentValue = 0;
+
+        // 既存のアニメーションをキル
+        if (currentTween != null)
         {
-            uiText.text += letter;
-            yield return new WaitForSeconds(delay);
+            currentTween.Kill();
         }
-        typingCoroutine = null;  // タイピングが完了したらコルーチンの参照をリセット
+
+        // Textコンポーネントのテキストをリセット
+        GetComponent<Text>().text = "0";
+
+        // 新しいアニメーションをアサイン
+        currentTween = DOTween.To(() => currentValue, x => currentValue = x, targetValue, counterDuration)
+            .OnUpdate(() =>
+            {
+                GetComponent<Text>().text = currentValue.ToString();
+            })
+            .OnComplete(() => OnTypeComplete?.Invoke());
     }
 }

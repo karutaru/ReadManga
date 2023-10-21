@@ -55,6 +55,8 @@ public class MangaData
     [SerializeField, Multiline(3)]  // 漫画の説明
     public string explanation;
 
+    [LabelText("漫画のアイコン用タイトル画像"), HideLabel]
+    public Sprite manga_Title;     // 漫画のアイコン用タイトル画像
     [LabelText("漫画の表紙"), HideLabel]
     public Sprite manga_Sprite;     // 漫画の表紙
     [LabelText("漫画のオススメのコマ"), HideLabel]
