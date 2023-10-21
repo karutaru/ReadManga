@@ -2,80 +2,63 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+
+[RequireComponent(typeof(ScrollRect))]
 public class InfiniteScroll : MonoBehaviour
 {
-    public GameObject itemPrefab;
-    public int totalItemCount;
-    public int maxVisibleItems;
-
+    public RectTransform content;
+    public int itemCount; // アイテムの総数
+    public float itemHeight; // 1つのアイテムの高さ
     private ScrollRect scrollRect;
-    private List<GameObject> itemPool = new List<GameObject>();
-    private int firstItemIndex = 0;
+    private int visibleItemCount; // 表示中のアイテム数
 
-    private float itemHeight;
-
-    void Start()
+    private void Awake()
     {
         scrollRect = GetComponent<ScrollRect>();
-        itemHeight = itemPrefab.GetComponent<RectTransform>().sizeDelta.y;
-
-        InitializeItemPool();
-        UpdateItems();
+        scrollRect.onValueChanged.AddListener(OnScroll);
+        visibleItemCount = Mathf.CeilToInt(scrollRect.viewport.rect.height / itemHeight) + 2;
     }
 
-    void InitializeItemPool()
+    private void OnScroll(Vector2 position)
     {
-        for (int i = 0; i < maxVisibleItems + 2; i++)
+        float contentPosition = content.anchoredPosition.y;
+
+        // 上方向へのスクロール
+        if (contentPosition >= itemHeight)
         {
-            GameObject item = Instantiate(itemPrefab, scrollRect.content);
-            itemPool.Add(item);
+            int itemsToMove = Mathf.FloorToInt(contentPosition / itemHeight);
+            for (int i = 0; i < itemsToMove; i++)
+            {
+                MoveItemToBottom();
+            }
+            content.anchoredPosition -= new Vector2(0, itemsToMove * itemHeight);
+        }
+
+        // 下方向へのスクロール
+        if (contentPosition < 0)
+        {
+            int itemsToMove = Mathf.FloorToInt(-contentPosition / itemHeight) + 1;
+            for (int i = 0; i < itemsToMove; i++)
+            {
+                MoveItemToTop();
+            }
+            content.anchoredPosition += new Vector2(0, itemsToMove * itemHeight);
         }
     }
 
-    void Update()
+    private void MoveItemToBottom()
     {
-        CheckScrollPosition();
+        // 最初のアイテムを最後の位置に移動
+        RectTransform firstItem = content.GetChild(0) as RectTransform;
+        firstItem.SetAsLastSibling();
+        firstItem.anchoredPosition -= new Vector2(0, itemCount * itemHeight);
     }
 
-    void CheckScrollPosition()
+    private void MoveItemToTop()
     {
-        if (scrollRect.content.anchoredPosition.y > itemHeight * 2)
-        {
-            firstItemIndex = (firstItemIndex + 1) % totalItemCount;
-            MoveItemToLast(itemPool[0]);
-            UpdateItems();
-        }
-        else if (scrollRect.content.anchoredPosition.y < 0)
-        {
-            firstItemIndex--;
-            if (firstItemIndex < 0) firstItemIndex = totalItemCount - 1;
-            MoveItemToFirst(itemPool[itemPool.Count - 1]);
-            UpdateItems();
-        }
-    }
-
-    void MoveItemToLast(GameObject item)
-    {
-        item.transform.SetAsLastSibling();
-        itemPool.RemoveAt(0);
-        itemPool.Add(item);
-    }
-
-    void MoveItemToFirst(GameObject item)
-    {
-        item.transform.SetAsFirstSibling();
-        itemPool.RemoveAt(itemPool.Count - 1);
-        itemPool.Insert(0, item);
-    }
-
-    void UpdateItems()
-    {
-        for (int i = 0; i < itemPool.Count; i++)
-        {
-            int dataIndex = (firstItemIndex + i) % totalItemCount;
-            itemPool[i].SetActive(true);
-            // Update the item data here, e.g.:
-            // itemPool[i].GetComponent<ItemController>().SetData(dataList[dataIndex]);
-        }
+        // 最後のアイテムを最初の位置に移動
+        RectTransform lastItem = content.GetChild(content.childCount - 1) as RectTransform;
+        lastItem.SetAsFirstSibling();
+        lastItem.anchoredPosition += new Vector2(0, itemCount * itemHeight);
     }
 }

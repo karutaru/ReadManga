@@ -7,11 +7,13 @@ using System;
 
 public class MangaBarsDisplay : MonoBehaviour
 {
+    public SpriteRenderer manga_hyoshi; // 漫画の表紙
+
     public MangaDataSO mangaDataSO;
     public MangaListManager mangaListManager;   // MangaListManagerへの参照を追加
+    public ImageResizer imageResizer;
+
     public List<TypingText> typingTexts = new List<TypingText>();
-
-
     public List<Image> barImages;
     public List<Image> adjacentImageDisplays;   // 最大3つのBarの隣接画像のリスト
     public List<Text> genreTextObjects;         // ジャンルの日本語名を表示するテキストオブジェクトのリスト
@@ -57,6 +59,11 @@ public class MangaBarsDisplay : MonoBehaviour
         {
             targetMangaData = mangaDataSO.manga_DataList.FirstOrDefault(manga => manga.manga_ID == manga_ID.Value);
 
+            mangaListManager.DisplayMangaInfoByID(targetMangaData.manga_ID);
+
+            manga_hyoshi.sprite = targetMangaData.manga_Sprite;
+            imageResizer.ResizeImage();
+
             if (targetMangaData == null)
             {
                 Debug.LogWarning($"No MangaData entry found for manga_ID: {manga_ID.Value}");
@@ -84,6 +91,12 @@ public class MangaBarsDisplay : MonoBehaviour
             if (i < genreTextObjects.Count)
             {
                 genreTextObjects[i].text = targetMangaData.manga_Tags[i].Tag.ToString();
+
+                MangaTagWithValue tagWithValue = targetMangaData.manga_Tags[i];
+                if (tagWithValue.Tag == MangaTag.自作タグ && !string.IsNullOrEmpty(tagWithValue.customTagText))
+                {
+                    genreTextObjects[i].text = tagWithValue.customTagText;  // Set the text to the content of customTagText
+                }
 
                 // ジャンルタグに対応する色をテキストオブジェクトに設定
                 int colorIndex = tagImageMappingList.mangaTags.IndexOf(targetMangaData.manga_Tags[i].Tag);

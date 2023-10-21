@@ -18,7 +18,7 @@ public class ImageResizer : MonoBehaviour
         ResizeImage();
     }
 
-    private void ResizeImage()
+    public void ResizeImage()
     {
         if (spriteRenderer == null || spriteRenderer.sprite == null)
         {

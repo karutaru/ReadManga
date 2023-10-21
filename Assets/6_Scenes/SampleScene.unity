@@ -636,8 +636,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b96f14ca051444fb436762bb78bb78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manga_hyoshi: {fileID: 676383118}
   mangaDataSO: {fileID: 11400000, guid: f7e8f53b3d1037b4f9dd4d8c01d65b80, type: 2}
   mangaListManager: {fileID: 371148517}
+  imageResizer: {fileID: 676383120}
   typingTexts:
   - {fileID: 806647368}
   - {fileID: 1795352280}
@@ -659,7 +661,7 @@ MonoBehaviour:
   - {fileID: 1795352281}
   - {fileID: 1505063033}
   tagImageMappingList:
-    mangaTags: 000000000100000002000000030000000400000005000000060000000700000008000000
+    mangaTags: 00000000010000000200000003000000040000000500000006000000070000000800000009000000
     individualBarImages:
     - {fileID: -896326002, guid: 22efeaae18c8ffc459a0129ffb525de0, type: 3}
     - {fileID: -1620558054, guid: 22efeaae18c8ffc459a0129ffb525de0, type: 3}
@@ -670,6 +672,7 @@ MonoBehaviour:
     - {fileID: 247168643, guid: 22efeaae18c8ffc459a0129ffb525de0, type: 3}
     - {fileID: 282156836, guid: 22efeaae18c8ffc459a0129ffb525de0, type: 3}
     - {fileID: -1658568069, guid: 22efeaae18c8ffc459a0129ffb525de0, type: 3}
+    - {fileID: 765399116, guid: 22efeaae18c8ffc459a0129ffb525de0, type: 3}
     individualAdjacentImages:
     - {fileID: 281633759, guid: bb5bf27e8aa2db546b4c18221af37946, type: 3}
     - {fileID: -464727836, guid: bb5bf27e8aa2db546b4c18221af37946, type: 3}
@@ -680,6 +683,7 @@ MonoBehaviour:
     - {fileID: -355276010, guid: bb5bf27e8aa2db546b4c18221af37946, type: 3}
     - {fileID: 26171693, guid: bb5bf27e8aa2db546b4c18221af37946, type: 3}
     - {fileID: -1745943097, guid: bb5bf27e8aa2db546b4c18221af37946, type: 3}
+    - {fileID: 21300000, guid: b1bb27f449f9281409949a4a7f866cdf, type: 3}
     individualTagColors:
     - {r: 0.59607846, g: 0.9058824, b: 0.4039216, a: 1}
     - {r: 1, g: 0.6745098, b: 0, a: 1}
@@ -690,6 +694,7 @@ MonoBehaviour:
     - {r: 0.6156863, g: 0.36862746, b: 0.8196079, a: 1}
     - {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
     - {r: 0.9176471, g: 0.3254902, b: 0.5137255, a: 1}
+    - {r: 0.9960785, g: 0, b: 0, a: 1}
 --- !u!1 &371148515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,8 +1426,8 @@ MonoBehaviour:
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
-  m_Inertia: 1
-  m_DecelerationRate: 0.135
+  m_Inertia: 0
+  m_DecelerationRate: 0.00001
   m_ScrollSensitivity: 1
   m_Viewport: {fileID: 2096946113}
   m_HorizontalScrollbar: {fileID: 1181683081}
@@ -1484,9 +1489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f9297643231e54aa9fbc4141c50aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 730585249703598930, guid: 3b3b5db3b1b98ae45ae386e74e1dbed6, type: 3}
-  totalItemCount: 100
-  maxVisibleItems: 32
+  content: {fileID: 1478384703}
+  itemCount: 38
+  itemHeight: 338
 --- !u!1 &564190400
 GameObject:
   m_ObjectHideFlags: 0
@@ -3048,6 +3053,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1178511073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178511075}
+  - component: {fileID: 1178511074}
+  m_Layer: 0
+  m_Name: MangaIcon_Instantiate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1178511074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178511073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e770f5eb0e1f54ebd5bc2e0b9c2a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mangaDataSO: {fileID: 11400000, guid: f7e8f53b3d1037b4f9dd4d8c01d65b80, type: 2}
+  mangaPrefab: {fileID: 69001447517391360, guid: 3b3b5db3b1b98ae45ae386e74e1dbed6, type: 3}
+  content: {fileID: 1478384703}
+  mangaBarsDisplay: {fileID: 358667841}
+--- !u!4 &1178511075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178511073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181683079
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,7 +3306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201583894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.853, y: 0.902, z: 0}
+  m_LocalPosition: {x: 6.8530006, y: 0.90199995, z: 0}
   m_LocalScale: {x: 1.944, y: 1.773846, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

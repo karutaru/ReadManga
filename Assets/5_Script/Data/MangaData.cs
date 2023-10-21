@@ -12,7 +12,8 @@ public enum MangaTag
     推理,
     鬱,
     グロ,
-    エロ
+    エロ,
+    自作タグ
 }
 
 [System.Serializable]
@@ -24,9 +25,18 @@ public class MangaTagWithValue
     [Range(0, 10)]
     public float Value;
 
+    [ShowIf("IsCustomTagSelected")]
+    public string customTagText;  // Add this line for custom tag text
+
     private IEnumerable<MangaTag> GetAllMangaTags()
     {
         return System.Enum.GetValues(typeof(MangaTag)) as IEnumerable<MangaTag>;
+    }
+
+    // This method checks if the selected tag is the "自作タグ"
+    private bool IsCustomTagSelected()
+    {
+        return Tag == MangaTag.自作タグ;
     }
 }
 
@@ -52,7 +62,7 @@ public class MangaData
     public List<MangaTagWithValue> manga_Tags;  // ジャンルとその数値
 
     [LabelText("漫画の説明"), HideLabel]
-    [SerializeField, Multiline(3)]  // 漫画の説明
+    [SerializeField, Multiline(4)]  // 漫画の説明
     public string explanation;
 
     [LabelText("漫画のアイコン用タイトル画像"), HideLabel]
