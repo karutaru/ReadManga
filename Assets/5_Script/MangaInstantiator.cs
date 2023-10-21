@@ -48,6 +48,13 @@ public class MangaInstantiator : MonoBehaviour
                     childImages[i + 1].sprite = mangaBarsDisplay.tagImageMappingList.individualAdjacentImages[(int)tag];
                 }
             }
+
+            // 子要素のテキストコンポーネントを取得して、manga_Favの値を設定
+            Text favText = mangaItem.GetComponentInChildren<Text>();
+            if (favText != null)
+            {
+                favText.text = manga.manga_Fav.ToString();
+            }
         }
     }
 }
