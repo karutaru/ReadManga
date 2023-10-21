@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,6 +32,21 @@ public class MangaInstantiator : MonoBehaviour
             if (mangaImage != null && manga.manga_ID == mangaDataSO.manga_DataList.IndexOf(manga) + 1)
             {
                 mangaImage.sprite = manga.manga_Title;
+            }
+
+            // 子要素のImageコンポーネントを取得して、MangaBarsDisplayのアイコン画像を設定
+            Image[] childImages = mangaItem.GetComponentsInChildren<Image>(true);
+
+            // Skip the parent's image component by starting from the first child
+            for (int i = 0; i < manga.manga_Tags.Count && i + 1 < childImages.Length; i++)
+            {
+                MangaTag tag = manga.manga_Tags[i].Tag;
+
+                // Check if the tag's value is within the bounds of the individualAdjacentImages list
+                if ((int)tag < mangaBarsDisplay.tagImageMappingList.individualAdjacentImages.Count)
+                {
+                    childImages[i + 1].sprite = mangaBarsDisplay.tagImageMappingList.individualAdjacentImages[(int)tag];
+                }
             }
         }
     }
