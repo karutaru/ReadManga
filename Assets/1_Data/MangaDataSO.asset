@@ -16,90 +16,360 @@ MonoBehaviour:
   - manga_ID: 1
     manga_Name: "\u5C11\u5973\u7D42\u672B\u65C5\u884C"
     manga_ruby: "\u3057\u3087\u3046\u3058\u3087\u3057\u3085\u3046\u307E\u3064\u308A\u3087\u3053\u3046"
-    manga_Fav: 8.28
+    manga_Fav: 7.86
     manga_Tags:
-    - Tag: 0
+    - Tag: 1
+      customTagText: 
       Value: 6.72
-      customTagText: 
-    - Tag: 4
-      Value: 3.4
-      customTagText: 
     - Tag: 5
-      Value: 10
       customTagText: 
+      Value: 3.4
+    - Tag: 6
+      customTagText: 
+      Value: 2.57
     explanation: "2\u4EBA\u306E\u5C11\u5973\u304C\u7D42\u672B\u306E\u4E16\u754C\u3092\u65C5\u3059\u308B\u6F2B\u753B\u3002\n\u305D\u306E\u8003\u3048\u3055\u305B\u3089\u308C\u308B\u4E16\u754C\u89B3\u3068\u7279\u5FB4\u7684\u306A\u4F5C\u98A8\u304C\u9B45\u529B\u3002"
     manga_Title: {fileID: 21300000, guid: bd5411b539b8498409933e4a93a41449, type: 3}
     manga_Sprite: {fileID: 21300000, guid: ffe80a142f324574f97732a17765d8c8, type: 3}
     manga_Page: {fileID: 21300000, guid: f832bb38b143e23439eb81239a3e7806, type: 3}
   - manga_ID: 2
-    manga_Name: "\u5C0F\u6797\u3055\u3093\u3061\u306E\u30E1\u30A4\u30C9\u30E9\u30B4\u30F3"
-    manga_ruby: "\u3053\u3070\u3084\u3057\u3055\u3093\u3061\u306E\u3081\u3044\u3069\u3089\u3054\u3093"
-    manga_Fav: 6.42
-    manga_Tags:
-    - Tag: 0
-      Value: 2.84
-      customTagText: 
-    - Tag: 1
-      Value: 6.08
-      customTagText: 
-    - Tag: 6
-      Value: 0
-      customTagText: 
-    explanation: "\u4E3B\u4EBA\u516C\u306E\u5973\u6027\u3068\u30E1\u30A4\u30C9\u306E\u683C\u597D\u3092\u3057\u305F\u30C9\u30E9\u30B4\u30F3\u306E\u65E5\u5E38\u30B3\u30E1\u30C7\u30A3\u3002\n\u6642\u6298\u5165\u308B\u3001\u30B7\u30EA\u30A2\u30B9\u56DE\u3082\u9B45\u529B\u3002"
-    manga_Title: {fileID: 21300000, guid: e14205774cb34434183a5b459e47385c, type: 3}
-    manga_Sprite: {fileID: 21300000, guid: 1edff7a55a72cd8419464b1dbe6d9cf0, type: 3}
-    manga_Page: {fileID: 0}
-  - manga_ID: 3
-    manga_Name: "\u88CF\u4E16\u754C\u30D4\u30AF\u30CB\u30C3\u30AF"
-    manga_ruby: "\u3046\u3089\u305B\u304B\u3044\u3074\u304F\u306B\u3063\u304F"
-    manga_Fav: 6.24
-    manga_Tags:
-    - Tag: 0
-      Value: 6.34
-      customTagText: 
-    - Tag: 7
-      Value: 5.05
-      customTagText: 
-    - Tag: 9
-      Value: 4.04
-      customTagText: "\u602A\u8AC7"
-    explanation: "\u88CF\u4E16\u754C\u3092\u65C5\u3059\u308B2\u4EBA\u306E\u5C11\u5973\u3002"
-    manga_Title: {fileID: 21300000, guid: 009f5a8a32a63b34cadd7c572354cbb6, type: 3}
-    manga_Sprite: {fileID: 21300000, guid: 402e2d7b878f2c147a99ae72726002c9, type: 3}
-    manga_Page: {fileID: 0}
-  - manga_ID: 4
     manga_Name: "\u30A6\u30C1\u306E\u4F7F\u3044\u9B54\u304C\u3059\u307F\u307E\u305B\u3093"
     manga_ruby: "\u3046\u3061\u306E\u3064\u304B\u3044\u307E\u304C\u3059\u307F\u307E\u305B\u3093"
     manga_Fav: 6.54
     manga_Tags:
-    - Tag: 1
-      Value: 6.07
-      customTagText: 
-    - Tag: 0
-      Value: 5.19
-      customTagText: 
     - Tag: 2
-      Value: 5.53
       customTagText: 
+      Value: 6.07
+    - Tag: 1
+      customTagText: 
+      Value: 5.19
+    - Tag: 3
+      customTagText: 
+      Value: 4.53
     explanation: "\u60AA\u9B54\u306E\u5973\u306E\u5B50\u3068\u4EBA\u9593\u306E\u304A\u3058\u3055\u3093\u306E\u30B3\u30E1\u30C7\u30A3\u30FC\u6F2B\u753B\u3002"
     manga_Title: {fileID: 21300000, guid: 180466b1c637698458b6a920b79ec758, type: 3}
     manga_Sprite: {fileID: 21300000, guid: b9d4911311b17cf4abbe50879ad8b6bf, type: 3}
     manga_Page: {fileID: 0}
-  - manga_ID: 5
+  - manga_ID: 3
     manga_Name: "\u63A8\u3057\u306E\u5B50"
     manga_ruby: "\u304A\u3057\u306E\u3053"
     manga_Fav: 6.42
     manga_Tags:
-    - Tag: 4
-      Value: 3.76
-      customTagText: 
-    - Tag: 3
-      Value: 2.95
-      customTagText: 
     - Tag: 5
-      Value: 2.48
       customTagText: 
+      Value: 3.76
+    - Tag: 4
+      customTagText: 
+      Value: 2.95
+    - Tag: 6
+      customTagText: 
+      Value: 2.48
     explanation: "\u63A8\u3057\u306E\u5B50\u4F9B\u306B\u751F\u307E\u308C\u5909\u308F\u3063\u305F2\u4EBA\u304C\u82B8\u80FD\u754C\u306B\u6311\u3080\u3002\n\u30AD\u30E3\u30E9\u540C\u58EB\u306E\u639B\u3051\u5408\u3044\u3082\u9762\u767D\u3044\u304C\u3001\u6642\u6298\u631F\u307E\u308C\u308B\u30B7\u30EA\u30A2\u30B9\u306A\u30A8\u30D4\u30BD\u30FC\u30C9\u306F\u885D\u6483\u7684\u3002"
     manga_Title: {fileID: 21300000, guid: 5c7caa0fd504ebb48bbe78a556b632a3, type: 3}
     manga_Sprite: {fileID: 21300000, guid: 942cafc927619e942a22f4ac920a0ae2, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 4
+    manga_Name: "\u4E16\u754C\u9B3C"
+    manga_ruby: "\u305B\u304B\u3044\u304A\u306B"
+    manga_Fav: 7.03
+    manga_Tags:
+    - Tag: 3
+      customTagText: 
+      Value: 6.76
+    - Tag: 7
+      customTagText: 
+      Value: 6.35
+    - Tag: 9
+      customTagText: 
+      Value: 1.76
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: f93542a6d57487a478b7e52a4868ead7, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 51d8cec94df61c9409671943d871c186, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 5
+    manga_Name: "\u9B54\u738B\u69D8\u306B\u53EC\u559A\u3055\u308C\u305F\u3051\u3069\u8A00\u8449\u304C\u901A\u3058\u306A\u3044"
+    manga_ruby: "\u307E\u304A\u3046\u3055\u307E\u306B\u3057\u3087\u3046\u304B\u3093\u3055\u308C\u305F\u3051\u3069\u3053\u3068\u3070\u304C\u3064\u3046\u3058\u306A\u3044"
+    manga_Fav: 5.18
+    manga_Tags:
+    - Tag: 1
+      customTagText: 
+      Value: 5.48
+    - Tag: 0
+      customTagText: 
+      Value: 0
+    - Tag: 0
+      customTagText: 
+      Value: 0
+    explanation: "\u7570\u4E16\u754C\u306B\u53EC\u559A\u3055\u308C\u305F\u7537\u3068\u9B54\u738B\u306E\u5A18\u306E\u307B\u306E\u307C\u306E\u6F2B\u753B\u3002"
+    manga_Title: {fileID: 21300000, guid: 816637f776662e64d97db8c0c67cb561, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: f0574f1a6cd348b4fbaabb633176e8f7, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 6
+    manga_Name: "\u9B54\u738B\u57CE\u3067\u304A\u3084\u3059\u307F"
+    manga_ruby: "\u307E\u304A\u3046\u3058\u3087\u3046\u3067\u304A\u3084\u3059\u307F"
+    manga_Fav: 7.14
+    manga_Tags:
+    - Tag: 2
+      customTagText: 
+      Value: 6.55
+    - Tag: 1
+      customTagText: 
+      Value: 5.34
+    - Tag: 0
+      customTagText: 
+      Value: 0
+    explanation: "\u9B54\u738B\u57CE\u306B\u56DA\u308F\u308C\u305F\u59EB\u3068\u500B\u6027\u7684\u306A\u9B54\u7269\u305F\u3061\u306B\u3088\u308B\u30B3\u30E1\u30C7\u30A3\u30FC\u6F2B\u753B\u3002"
+    manga_Title: {fileID: 21300000, guid: b258153cb5bfacb4eac7479740d3870d, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: d37a7bd005873944e8185da518f38e9b, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 7
+    manga_Name: "\u30AB\u30B2\u30ED\u30A6\u30C7\u30A4\u30BA"
+    manga_ruby: "\u304B\u3052\u308D\u3046\u3067\u3044\u305A"
+    manga_Fav: 5.66
+    manga_Tags:
+    - Tag: 7
+      customTagText: 
+      Value: 6.76
+    - Tag: 1
+      customTagText: 
+      Value: 4.46
+    - Tag: 3
+      customTagText: 
+      Value: 3.45
+    explanation: "8\u670814\u65E5\u306815\u65E5\u306E\u51FA\u6765\u4E8B\u3092\u63CF\u3044\u305F\u5C11\u5E74\u5C11\u5973\u306E\u7269\u8A9E\u3002\n\u307B\u306E\u307C\u306E\u3068\u3057\u305F\u65E5\u5E38\u3068\u6B8B\u9177\u306A\u904B\u547D\u306E\u5BFE\u6BD4\u304C\u826F\u3044\u3002"
+    manga_Title: {fileID: 21300000, guid: 30a020723610ec04190bc7fbfb12ab63, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 6b406d52bb760aa458ad71b7016e7224, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 8
+    manga_Name: "\u865A\u69CB\u63A8\u7406"
+    manga_ruby: "\u304D\u3087\u3053\u3046\u3059\u3044\u308A"
+    manga_Fav: 6.79
+    manga_Tags:
+    - Tag: 6
+      customTagText: 
+      Value: 7.16
+    - Tag: 3
+      customTagText: 
+      Value: 5.81
+    - Tag: 4
+      customTagText: 
+      Value: 4.94
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: 92836d4e20af64249ad152b44b352850, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: d05550cadb7721e4ca9451078c768cd5, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 9
+    manga_Name: "\u304A\u3084\u3059\u307F\u3077\u3093\u3077\u3093"
+    manga_ruby: "\u304A\u3084\u3059\u307F\u3077\u3093\u3077\u3093"
+    manga_Fav: 6.31
+    manga_Tags:
+    - Tag: 7
+      customTagText: 
+      Value: 8.51
+    - Tag: 4
+      customTagText: 
+      Value: 7.23
+    - Tag: 9
+      customTagText: 
+      Value: 3.05
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: 193e6727642a82a4a9586481e37dcd9e, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 3b1a611bba1f87441858378dbc80085d, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 10
+    manga_Name: "\u30B4\u30FC\u30EB\u30C7\u30F3\u30B4\u30FC\u30EB\u30C9"
+    manga_ruby: "\u3054\u30FC\u308B\u3067\u3093\u3054\u30FC\u308B\u3069"
+    manga_Fav: 5.95
+    manga_Tags:
+    - Tag: 5
+      customTagText: 
+      Value: 5.21
+    - Tag: 6
+      customTagText: 
+      Value: 4.26
+    - Tag: 4
+      customTagText: 
+      Value: 2.17
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: d7ac65f915e2ea749a1f96836bf85821, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: fd8c7d63a10d2624c8cf90a42bc8b6d0, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 11
+    manga_Name: "\u7A7A\u304C\u7070\u8272\u3060\u304B\u3089"
+    manga_ruby: "\u305D\u3089\u304C\u306F\u3044\u3044\u308D\u3060\u304B\u3089"
+    manga_Fav: 7.14
+    manga_Tags:
+    - Tag: 7
+      customTagText: 
+      Value: 6.22
+    - Tag: 2
+      customTagText: 
+      Value: 5.68
+    - Tag: 1
+      customTagText: 
+      Value: 3.52
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: 7c209ba815452df41a9ae59c23b6c8e8, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 25cdf4bcec9befd40ad5ff3e49dce77a, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 12
+    manga_Name: "\u30B7\u30E1\u30B8 \u30B7\u30DF\u30E5\u30EC\u30FC\u30B7\u30E7\u30F3"
+    manga_ruby: "\u3057\u3081\u3058 \u3057\u307F\u3085\u308C\u30FC\u3057\u3087\u3093"
+    manga_Fav: 7.33
+    manga_Tags:
+    - Tag: 1
+      customTagText: 
+      Value: 5.88
+    - Tag: 2
+      customTagText: 
+      Value: 4.67
+    - Tag: 6
+      customTagText: 
+      Value: 4.46
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: b886d27ed4931be4393dc5349ee34744, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 1435b1fd5f9cd8a4a8fb3ba3f4971d20, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 13
+    manga_Name: "\u5C06\u6765\u7684\u306B\u6B7B\u3093\u3067\u304F\u308C"
+    manga_ruby: "\u3057\u3087\u3046\u3089\u3044\u3066\u304D\u306B\u3057\u3093\u3067\u304F\u308C"
+    manga_Fav: 6.43
+    manga_Tags:
+    - Tag: 2
+      customTagText: 
+      Value: 6.56
+    - Tag: 1
+      customTagText: 
+      Value: 5.81
+    - Tag: 4
+      customTagText: 
+      Value: 4.94
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: 7e1ebf21af15107418a97fd1e3dafcbe, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 04027a2cb43bb0d4795782f2a95c5ada, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 14
+    manga_Name: "\u9AA8\u30C9\u30E9\u30B4\u30F3\u306E\u30DE\u30CA\u5A18"
+    manga_ruby: "\u307B\u306D\u3069\u3089\u3054\u3093\u306E\u307E\u306A\u3080\u3059\u3081"
+    manga_Fav: 6.69
+    manga_Tags:
+    - Tag: 1
+      customTagText: 
+      Value: 6.09
+    - Tag: 3
+      customTagText: 
+      Value: 5.03
+    - Tag: 0
+      customTagText: 
+      Value: 0
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: cd1aa95cf0e8feb4f8ecf28499d4e8ba, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 7a2b300501a31464690736ad0b32bb1d, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 15
+    manga_Name: "\u6697\u6BBA\u6559\u5BA4"
+    manga_ruby: "\u3042\u3093\u3055\u3064\u304D\u3087\u3046\u3057\u3064"
+    manga_Fav: 7.18
+    manga_Tags:
+    - Tag: 2
+      customTagText: 
+      Value: 6.77
+    - Tag: 3
+      customTagText: 
+      Value: 6.09
+    - Tag: 0
+      customTagText: 
+      Value: 0
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: 5dbb6d9e3e0bc704ea1bfc048e98841c, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 546b25bd4abc7f94caf698ffc870c090, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 16
+    manga_Name: "\u88CF\u4E16\u754C\u30D4\u30AF\u30CB\u30C3\u30AF"
+    manga_ruby: "\u3046\u3089\u305B\u304B\u3044\u3074\u304F\u306B\u3063\u304F"
+    manga_Fav: 6.24
+    manga_Tags:
+    - Tag: 3
+      customTagText: 
+      Value: 5.53
+    - Tag: 8
+      customTagText: 
+      Value: 4.26
+    - Tag: 10
+      customTagText: "\u602A\u8AC7"
+      Value: 4.04
+    explanation: "\u88CF\u4E16\u754C\u3092\u65C5\u3059\u308B2\u4EBA\u306E\u5C11\u5973\u3002"
+    manga_Title: {fileID: 21300000, guid: 009f5a8a32a63b34cadd7c572354cbb6, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 402e2d7b878f2c147a99ae72726002c9, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 17
+    manga_Name: "\u307E\u3063\u305F\u304F\u6700\u8FD1\u306E\u63A2\u5075\u3068\u304D\u305F\u3089"
+    manga_ruby: "\u307E\u3063\u305F\u304F\u3055\u3044\u304D\u3093\u306E\u305F\u3093\u3066\u3044\u3068\u304D\u305F\u3089"
+    manga_Fav: 6.31
+    manga_Tags:
+    - Tag: 2
+      customTagText: 
+      Value: 6.15
+    - Tag: 0
+      customTagText: 
+      Value: 0
+    - Tag: 0
+      customTagText: 
+      Value: 0
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: 37692093db722214c91804f1967ddfa6, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 56bc95cb335a4e54e95f579a978ad8c2, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 18
+    manga_Name: "\u5C0F\u6797\u3055\u3093\u3061\u306E\u30E1\u30A4\u30C9\u30E9\u30B4\u30F3"
+    manga_ruby: "\u3053\u3070\u3084\u3057\u3055\u3093\u3061\u306E\u3081\u3044\u3069\u3089\u3054\u3093"
+    manga_Fav: 6.42
+    manga_Tags:
+    - Tag: 2
+      customTagText: 
+      Value: 6.29
+    - Tag: 1
+      customTagText: 
+      Value: 4.73
+    - Tag: 4
+      customTagText: 
+      Value: 2.57
+    explanation: "\u4E3B\u4EBA\u516C\u306E\u5973\u6027\u3068\u30E1\u30A4\u30C9\u306E\u683C\u597D\u3092\u3057\u305F\u30C9\u30E9\u30B4\u30F3\u306E\u65E5\u5E38\u30B3\u30E1\u30C7\u30A3\u3002\n\u6642\u6298\u5165\u308B\u3001\u30B7\u30EA\u30A2\u30B9\u56DE\u3082\u9B45\u529B\u3002"
+    manga_Title: {fileID: 21300000, guid: e14205774cb34434183a5b459e47385c, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 1edff7a55a72cd8419464b1dbe6d9cf0, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 19
+    manga_Name: "\u9B54\u6CD5\u4F7F\u3044\u306E\u5AC1"
+    manga_ruby: "\u307E\u307B\u3046\u3064\u304B\u3044\u306E\u3088\u3081"
+    manga_Fav: 6.84
+    manga_Tags:
+    - Tag: 4
+      customTagText: 
+      Value: 5.47
+    - Tag: 3
+      customTagText: 
+      Value: 5
+    - Tag: 1
+      customTagText: 
+      Value: 4.13
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: da13805d255793942a2ec2aa8f832dd8, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 2b84472f27866f344aa33148e697e308, type: 3}
+    manga_Page: {fileID: 0}
+  - manga_ID: 20
+    manga_Name: "\u30AD\u30E3\u30BF\u30D4\u30E9\u30FC"
+    manga_ruby: "\u304D\u3083\u305F\u3074\u3089\u30FC"
+    manga_Fav: 6.61
+    manga_Tags:
+    - Tag: 5
+      customTagText: 
+      Value: 8.31
+    - Tag: 3
+      customTagText: 
+      Value: 7.3
+    - Tag: 0
+      customTagText: 
+      Value: 0
+    explanation: 
+    manga_Title: {fileID: 21300000, guid: 9df6f090cbf3d3540a17c5e7295e538e, type: 3}
+    manga_Sprite: {fileID: 21300000, guid: 34aa7a3bb7967cc45ab85626b6552848, type: 3}
     manga_Page: {fileID: 0}

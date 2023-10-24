@@ -22,7 +22,6 @@ public class ImageResizer : MonoBehaviour
     {
         if (spriteRenderer == null || spriteRenderer.sprite == null)
         {
-            Debug.LogWarning("SpriteRenderer or Sprite is null.");
             return;
         }
 

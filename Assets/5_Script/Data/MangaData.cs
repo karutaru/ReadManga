@@ -4,6 +4,7 @@ using Sirenix.OdinInspector;
 
 public enum MangaTag
 {
+    なし,
     ほのぼの,
     コメディー,
     バトル,
@@ -22,18 +23,18 @@ public class MangaTagWithValue
     [ValueDropdown("GetAllMangaTags")]
     public MangaTag Tag;
 
+    [ShowIf("IsCustomTagSelected")]
+    public string customTagText;  // カスタムタグの名前
+
     [Range(0, 10)]
     public float Value;
-
-    [ShowIf("IsCustomTagSelected")]
-    public string customTagText;  // Add this line for custom tag text
 
     private IEnumerable<MangaTag> GetAllMangaTags()
     {
         return System.Enum.GetValues(typeof(MangaTag)) as IEnumerable<MangaTag>;
     }
 
-    // This method checks if the selected tag is the "自作タグ"
+    // "自作タグ"が選択されるか
     private bool IsCustomTagSelected()
     {
         return Tag == MangaTag.自作タグ;

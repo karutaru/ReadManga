@@ -13,6 +13,10 @@ public class MangaBarsDisplay : MonoBehaviour
     public MangaListManager mangaListManager;   // MangaListManager‚Ö‚ÌQÆ‚ğ’Ç‰Á
     public ImageResizer imageResizer;
 
+    public RotateTag_1 rotateTag_1;
+    public RotateTag_2 rotateTag_2;
+    public RotateTag_3 rotateTag_3;
+
     public List<TypingText> typingTexts = new List<TypingText>();
     public List<Image> barImages;
     public List<Image> adjacentImageDisplays;   // Å‘å3‚Â‚ÌBar‚Ì—×Ú‰æ‘œ‚ÌƒŠƒXƒg
