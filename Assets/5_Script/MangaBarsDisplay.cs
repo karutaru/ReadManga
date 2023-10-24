@@ -8,10 +8,12 @@ using System;
 public class MangaBarsDisplay : MonoBehaviour
 {
     public SpriteRenderer manga_hyoshi; // –Ÿ‰æ‚Ì•\†
+    public SpriteSwitcher spriteSwitcher; // ”wŒi‚Ì–Ÿ‰æ‚Ì•\†
 
     public MangaDataSO mangaDataSO;
     public MangaListManager mangaListManager;   // MangaListManager‚Ö‚ÌQÆ‚ğ’Ç‰Á
     public ImageResizer imageResizer;
+    //public ImageResizer2880 imageResizer_2;
 
     public RotateTag_1 rotateTag_1;
     public RotateTag_2 rotateTag_2;
@@ -66,7 +68,10 @@ public class MangaBarsDisplay : MonoBehaviour
             mangaListManager.DisplayMangaInfoByID(targetMangaData.manga_ID);
 
             manga_hyoshi.sprite = targetMangaData.manga_Sprite;
+            spriteSwitcher.SwitchSprite(targetMangaData.manga_Sprite);
+
             imageResizer.ResizeImage();
+            //imageResizer_2.ResizeImage();
 
             if (targetMangaData == null)
             {
